@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Hockey Name Generator</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body class="bg-light">
+
+    <main class="py-5">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-12 col-lg-8">
+
+            <div class="card shadow-lg border-0">
+              <div class="card-header text-center bg-primary text-white">
+                <h2 class="mb-0">Hockey Name Generator</h2>
+                <p class="mb-0">🏒 Personalize Your Hockey Identity</p>
+              </div>
+
+              <div class="card-body p-4">
+
+                <!-- First Initial -->
+                <div class="mb-3">
+                  <label for="firstInitial" class="form-label fw-semibold">
+                    First Letter of Your First Name
+                  </label>
+                  <input type="text" id="firstInitial" maxlength="1" class="form-control" placeholder="A-Z" />
+                </div>
+
+                <!-- Favorite Pet -->
+                <div class="mb-3">
+                  <label for="favoritePet" class="form-label fw-semibold">
+                    Favorite Pet
+                  </label>
+                  <select id="favoritePet" class="form-select">
+                    <option value="">Choose…</option>
+                    <option value="dog">Dog</option>
+                    <option value="cat">Cat</option>
+                    <option value="fish">Fish</option>
+                    <option value="bird">Bird</option>
+                    <option value="rabbit">Rabbit</option>
+                    <option value="hamster">Hamster</option>
+                    <option value="guinea pig">Guinea Pig</option>
+                    <option value="penguin">Penguin</option>
+                    <option value="bearded dragon">Bearded Dragon</option>
+                    <option value="rats">Rats</option>
+                    <option value="mice">Mice</option>
+                    <option value="horse">Horse</option>
+                  </select>
+                </div>
+
+                <!-- Favorite Color -->
+<div class="mb-3">
+  <label for="favoriteColor" class="form-label fw-semibold">
+    Favorite Color
+  </label>
+  <input type="color" id="favoriteColor" class="form-control form-control-color" value="#ff0000" title="Choose your color">
+</div>
+
+
+                <!-- Favorite Number -->
+                <div class="mb-3">
+                  <label for="favoriteNumber" class="form-label fw-semibold">
+                    Favorite Number (1-100)
+                  </label>
+                  <input type="number" id="favoriteNumber" min="1" max="100" class="form-control" placeholder="1-100" />
+                </div>
+
+                <!-- Buttons -->
+                <div class="d-grid gap-2 mb-3">
+                  <button class="btn btn-warning btn-lg fw-bold" onclick="showHockeyName()">
+                    🏒 Generate My Hockey Name
+                  </button>
+                  <button class="btn btn-secondary btn-lg fw-bold" onclick="resetForm()" id="resetBtn" style="display: none;">
+                    🔄 Start Over
+                  </button>
+                </div>
+
+                <!-- Output -->
+                <div class="text-center">
+                  <h4 id="output" class="fw-bold text-primary"></h4>
+                </div>
+
+              </div>
+
+              <div class="card-footer text-center text-muted">
+                <small>Every player has a unique identity! 🥅</small><br>
+                <small>&copy; 2025 Cash Studios</small>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"></script>
+
+    <script>
+      // Simple reset function
+      function resetForm() {
+        document.getElementById("firstInitial").value = "";
+        document.getElementById("favoritePet").value = "";
+        document.getElementById("favoriteColor").value = "";
+        document.getElementById("favoriteNumber").value = "";
+        document.getElementById("output").textContent = "";
+        document.getElementById("resetBtn").style.display = "none";
+      }
+    </script>
+
+  </body>
+</html>
