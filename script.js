@@ -134,33 +134,3 @@ function showHockeyName() {
     }
 }
 
-// ===== Optional Confetti / Button Effects =====
-function createConfetti() {
-    const colors = ['#00c853', '#b2ff59', '#ffd700', '#00bfff'];
-    for (let i = 0; i < 50; i++) {
-        const confetti = document.createElement('div');
-        confetti.style.position = 'fixed';
-        confetti.style.width = '10px';
-        confetti.style.height = '10px';
-        confetti.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
-        confetti.style.left = Math.random() * window.innerWidth + 'px';
-        confetti.style.top = '-10px';
-        confetti.style.borderRadius = '50%';
-        confetti.style.opacity = '1';
-        confetti.style.zIndex = '9999';
-        confetti.style.pointerEvents = 'none';
-        document.body.appendChild(confetti);
-
-        const duration = 2000 + Math.random() * 1000;
-        const xDrift = (Math.random() - 0.5) * 200;
-
-        setTimeout(() => {
-            confetti.animate([
-                { transform: 'translateY(0) translateX(0)', opacity: 1 },
-                { transform: `translateY(${window.innerHeight}px) translateX(${xDrift}px)`, opacity: 0 }
-            ], { duration: duration, easing: 'cubic-bezier(0.25, 0.46, 0.45, 0.94)' });
-
-            setTimeout(() => confetti.remove(), duration);
-        }, Math.random() * 100);
-    }
-}

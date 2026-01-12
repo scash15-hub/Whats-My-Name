@@ -10,22 +10,25 @@
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
       rel="stylesheet"
     />
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css" />
   </head>
 
-  <body class="bg-light">
+  <body>
 
-    <main class="py-5">
+    <main>
       <div class="container">
         <div class="row justify-content-center">
           <div class="col-12 col-lg-8">
 
             <div class="card shadow-lg border-0">
-              <div class="card-header text-center bg-primary text-white">
+              <div class="card-header text-center">
                 <h2 class="mb-0">Hockey Name Generator</h2>
-                <p class="mb-0">🏒 Personalize Your Hockey Identity</p>
+                <p class="mb-0">Personalize Your Hockey Name</p>
               </div>
 
-              <div class="card-body p-4">
+              <div class="card-body p-2">
 
                 <!-- First Initial -->
                 <div class="mb-3">
@@ -58,13 +61,12 @@
                 </div>
 
                 <!-- Favorite Color -->
-<div class="mb-3">
-  <label for="favoriteColor" class="form-label fw-semibold">
-    Favorite Color
-  </label>
-  <input type="color" id="favoriteColor" class="form-control form-control-color" value="#ff0000" title="Choose your color">
-</div>
-
+                <div class="mb-3">
+                  <label for="favoriteColor" class="form-label fw-semibold">
+                    Favorite Color
+                  </label>
+                  <input type="color" id="favoriteColor" class="form-control form-control-color" value="#ff0000" title="Choose your color">
+                </div>
 
                 <!-- Favorite Number -->
                 <div class="mb-3">
@@ -76,17 +78,17 @@
 
                 <!-- Buttons -->
                 <div class="d-grid gap-2 mb-3">
-                  <button class="btn btn-warning btn-lg fw-bold" onclick="showHockeyName()">
-                    🏒 Generate My Hockey Name
+                  <button class="btn btn-warning btn-lg fw-bold" onclick="showHockeyName(); createConfetti();">
+                     Generate My Hockey Name
                   </button>
                   <button class="btn btn-secondary btn-lg fw-bold" onclick="resetForm()" id="resetBtn" style="display: none;">
-                    🔄 Start Over
+                     Start Over
                   </button>
                 </div>
 
                 <!-- Output -->
                 <div class="text-center">
-                  <h4 id="output" class="fw-bold text-primary"></h4>
+                  <h4 id="output" class="fw-bold"></h4>
                 </div>
 
               </div>
@@ -102,20 +104,8 @@
       </div>
     </main>
 
+    <!-- Scripts -->
     <script src="script.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"></script>
-
-    <script>
-      // Simple reset function
-      function resetForm() {
-        document.getElementById("firstInitial").value = "";
-        document.getElementById("favoritePet").value = "";
-        document.getElementById("favoriteColor").value = "";
-        document.getElementById("favoriteNumber").value = "";
-        document.getElementById("output").textContent = "";
-        document.getElementById("resetBtn").style.display = "none";
-      }
-    </script>
-
   </body>
 </html>

@@ -1,0 +1,244 @@
+:root {
+  --rangers-blue: #0038A8;
+  --rangers-red: #CE1126;
+  --rangers-white: #FFFFFF;
+  --rangers-light-blue: #B3D7FF;
+}
+
+/* ---------- PAGE LAYOUT ---------- */
+body {
+  background: linear-gradient(to bottom right, var(--rangers-light-blue), var(--rangers-white));
+  font-family: 'Arial Black', sans-serif;
+  color: var(--rangers-blue);
+  min-height: 100vh;
+
+  /* NY RANGERS PNG CURSOR */
+  cursor: url("nyrlogo.cur") 16 16, auto;
+
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding-top: 40px;
+}
+
+/* Keep cursor on interactive elements */
+button,
+input,
+select,
+label {
+  cursor: url("nyrlogo.cur") 16 16, pointer;
+}
+
+/* Wider overall layout */
+main {
+  width: 100%;
+  max-width: 1200px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.container {
+  max-width: 1200px;
+}
+
+/* ---------- CARD ---------- */
+.card {
+  background-color: var(--rangers-white);
+  border-radius: 1rem;
+  border: 3px solid var(--rangers-blue);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: scale(1.02);
+  box-shadow: 0 18px 40px rgba(0,0,0,0.3);
+}
+
+/* ---------- HEADER ---------- */
+.card-header {
+  background: linear-gradient(45deg, var(--rangers-red), var(--rangers-blue));
+  color: var(--rangers-white);
+  text-align: center;
+  padding: 1.75rem;
+  border-bottom: 4px solid var(--rangers-white);
+}
+
+.card-header h2 {
+  font-size: 2.6rem;
+  margin: 0;
+  text-shadow: 2px 2px rgba(0,0,0,0.4);
+}
+
+.card-header p {
+  font-size: 1.5rem;
+  margin: 0;
+}
+
+/* ---------- BODY ---------- */
+.card-body {
+  padding: 2.5rem;
+}
+
+.form-label {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: var(--rangers-blue);
+}
+
+/* ---------- INPUTS ---------- */
+input[type="text"],
+input[type="number"],
+input[type="color"],
+select {
+  width: 100%;
+  font-size: 1.2rem;
+  padding: 0.75rem;
+  font-weight: bold;
+  color: var(--rangers-blue);
+  background-color: var(--rangers-white);
+  border-radius: 0.6rem;
+  border: 2px solid var(--rangers-blue);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* Longer color picker */
+input[type="color"] {
+  height: 60px;
+}
+
+/* Input hover + focus */
+input:hover,
+select:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 15px var(--rangers-red);
+}
+
+input:focus,
+select:focus {
+  outline: none;
+  border-color: var(--rangers-red);
+  box-shadow: 0 0 20px var(--rangers-red);
+  transform: scale(1.05);
+}
+
+/* ---------- BUTTONS ---------- */
+.btn-warning {
+  background-color: var(--rangers-red);
+  border-color: var(--rangers-blue);
+  color: var(--rangers-white);
+  font-size: 1.35rem;
+  font-weight: bold;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.btn-warning:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 18px var(--rangers-red);
+}
+
+.btn-secondary {
+  background-color: var(--rangers-blue);
+  border-color: var(--rangers-red);
+  color: var(--rangers-white);
+  font-size: 1.35rem;
+  font-weight: bold;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.btn-secondary:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 18px var(--rangers-blue);
+}
+
+/* ---------- OUTPUT ---------- */
+#output {
+  font-size: 2.6rem;
+  font-weight: bold;
+  margin-top: 25px;
+  color: var(--rangers-red);
+  text-shadow: 2px 2px var(--rangers-blue);
+}
+
+/* ---------- FOOTER ---------- */
+.card-footer {
+  text-align: center;
+  padding: 1rem;
+  font-weight: bold;
+  color: var(--rangers-blue);
+}
+
+/* ---------- CONFETTI ---------- */
+.confetti {
+  position: fixed;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 9999;
+}
+
+/* ---------- RESPONSIVE ---------- */
+
+/* Tall screens → push card down */
+@media (min-height: 900px) {
+  body {
+    padding-top: 120px;
+  }
+}
+
+/* Short screens → pull card up */
+@media (max-height: 600px) {
+  body {
+    padding-top: 20px;
+  }
+}
+
+/* Small screens */
+@media (max-width: 576px) {
+  main {
+    max-width: 100%;
+  }
+
+  .card-body {
+    padding: 1.5rem;
+  }
+
+  .card-header h2 {
+    font-size: 2rem;
+  }
+
+  .card-header p {
+    font-size: 1.2rem;
+  }
+
+  .form-label {
+    font-size: 1rem;
+  }
+
+  input,
+  select {
+    font-size: 1rem;
+    padding: 0.5rem;
+  }
+
+  input[type="color"] {
+    height: 50px;
+  }
+
+  #output {
+    font-size: 2rem;
+  }
+
+  .btn-warning,
+  .btn-secondary {
+    font-size: 1.1rem;
+  }
+}
+
+/* Extra wide screens */
+@media (min-width: 992px) {
+  main {
+    max-width: 1300px;
+  }
+}
