@@ -1,111 +1,75 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <title>Hockey Name Generator</title>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NY Rangers Name Generator</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
-    <!-- Bootstrap CSS -->
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-    />
+  <div class="container text-center py-5">
+    <h1 class="mb-4 text-white">NY Rangers Nickname Generator 🏒</h1>
 
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="style.css" />
-  </head>
+    <div class="card mb-4 p-4 bg-blue hover-card">
+      <h5 class="text-white">How to Use This Generator:</h5>
+      <ul class="text-white text-start mx-auto" style="max-width: 500px;">
+        <li>Pick your favorite number (1–100).</li>
+        <li>Enter the first letters of your first and last names.</li>
+        <li>Choose your favorite pet.</li>
+        <li>Pick your favorite color.</li>
+        <li>Click "Generate Name" to see your Rangers nickname!</li>
+      </ul>
+    </div>
 
-  <body>
-
-    <main>
-      <div class="container">
-        <div class="row justify-content-center">
-          <div class="col-12 col-lg-8">
-
-            <div class="card shadow-lg border-0">
-              <div class="card-header text-center">
-                <h2 class="mb-0">Hockey Name Generator</h2>
-                <p class="mb-0">Personalize Your Hockey Name</p>
-              </div>
-
-              <div class="card-body p-2">
-
-                <!-- First Initial -->
-                <div class="mb-3">
-                  <label for="firstInitial" class="form-label fw-semibold">
-                    First Letter of Your First Name
-                  </label>
-                  <input type="text" id="firstInitial" maxlength="1" class="form-control" placeholder="A-Z" />
-                </div>
-
-                <!-- Favorite Pet -->
-                <div class="mb-3">
-                  <label for="favoritePet" class="form-label fw-semibold">
-                    Favorite Pet
-                  </label>
-                  <select id="favoritePet" class="form-select">
-                    <option value="">Choose…</option>
-                    <option value="dog">Dog</option>
-                    <option value="cat">Cat</option>
-                    <option value="fish">Fish</option>
-                    <option value="bird">Bird</option>
-                    <option value="rabbit">Rabbit</option>
-                    <option value="hamster">Hamster</option>
-                    <option value="guinea pig">Guinea Pig</option>
-                    <option value="penguin">Penguin</option>
-                    <option value="bearded dragon">Bearded Dragon</option>
-                    <option value="rats">Rats</option>
-                    <option value="mice">Mice</option>
-                    <option value="horse">Horse</option>
-                  </select>
-                </div>
-
-                <!-- Favorite Color -->
-                <div class="mb-3">
-                  <label for="favoriteColor" class="form-label fw-semibold">
-                    Favorite Color
-                  </label>
-                  <input type="color" id="favoriteColor" class="form-control form-control-color" value="#ff0000" title="Choose your color">
-                </div>
-
-                <!-- Favorite Number -->
-                <div class="mb-3">
-                  <label for="favoriteNumber" class="form-label fw-semibold">
-                    Favorite Number (1-100)
-                  </label>
-                  <input type="number" id="favoriteNumber" min="1" max="100" class="form-control" placeholder="1-100" />
-                </div>
-
-                <!-- Buttons -->
-                <div class="d-grid gap-2 mb-3">
-                  <button class="btn btn-warning btn-lg fw-bold" onclick="showHockeyName(); createConfetti();">
-                     Generate My Hockey Name
-                  </button>
-                  <button class="btn btn-secondary btn-lg fw-bold" onclick="resetForm()" id="resetBtn" style="display: none;">
-                     Start Over
-                  </button>
-                </div>
-
-                <!-- Output -->
-                <div class="text-center">
-                  <h4 id="output" class="fw-bold"></h4>
-                </div>
-
-              </div>
-
-              <div class="card-footer text-center text-muted">
-                <small>Every player has a unique identity! 🥅</small><br>
-                <small>&copy; 2025 Cash Studios</small>
-              </div>
-            </div>
-
-          </div>
-        </div>
+    <div class="card p-4 mb-4 bg-red hover-card mx-auto" style="max-width: 500px;">
+      <div class="mb-3 text-white">
+        <label for="favoriteNumber" class="form-label">Favorite Number:</label>
+        <input type="range" class="form-range" id="favoriteNumber" min="1" max="100" value="1">
+        <span id="favoriteNumberValue">1</span>
       </div>
-    </main>
 
-    <!-- Scripts -->
-    <script src="script.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"></script>
-  </body>
+      <div class="mb-3">
+        <label for="firstInitial" class="form-label text-white">First letter of your first name:</label>
+        <input type="text" maxlength="1" class="form-control" id="firstInitial" placeholder="A-Z">
+      </div>
+
+      <div class="mb-3">
+        <label for="lastInitial" class="form-label text-white">First letter of your last name:</label>
+        <input type="text" maxlength="1" class="form-control" id="lastInitial" placeholder="A-Z">
+      </div>
+
+      <div class="mb-3">
+        <label for="favoritePet" class="form-label text-white">Favorite Pet:</label>
+        <select class="form-select" id="favoritePet">
+          <option value="">--Select--</option>
+          <option value="dog">Dog</option>
+          <option value="cat">Cat</option>
+          <option value="fish">Fish</option>
+          <option value="bird">Bird</option>
+          <option value="rabbit">Rabbit</option>
+        </select>
+      </div>
+
+      <div class="mb-3">
+        <label for="favoriteColor" class="form-label text-white">Favorite Color:</label>
+        <input type="color" class="form-control form-control-color" id="favoriteColor" value="#0038A8">
+      </div>
+
+      <button id="generateBtn" class="btn btn-white w-100 hover-btn">Generate Name</button>
+    </div>
+
+    <div class="card p-4 text-center hover-card mx-auto" id="outputCard" style="display:none; max-width: 500px;">
+      <h2 class="text-white">Your Rangers Name:</h2>
+      <p id="generatedName" class="fs-3 fw-bold text-white"></p>
+    </div>
+
+    <div class="alert alert-warning mt-3 mx-auto" id="errorMsg" style="display:none; max-width: 500px;">
+      Please fill out all inputs correctly!
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
 </html>
