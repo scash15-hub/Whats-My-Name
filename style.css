@@ -1,8 +1,16 @@
 body {
   background-color: #0038A8;
-  font-family: 'Arial', sans-serif;
   text-align: center;
   cursor: url('https://i.imgur.com/XhD0D0r.png'), auto;
+}
+
+.title-font {
+  font-family: 'Bebas Neue', sans-serif;
+  letter-spacing: 2px;
+}
+
+.section-font {
+  font-family: 'Oswald', sans-serif;
 }
 
 .hover-card:hover {
@@ -22,10 +30,6 @@ body {
   box-shadow: 0 5px 15px rgba(0,0,0,0.3);
 }
 
-.bg-blue {
-  background-color: #0038A8;
-}
-
 .bg-red {
   background-color: #CE1126;
 }
@@ -37,18 +41,16 @@ body {
   border: 2px solid #0038A8;
 }
 
+.instruction-card {
+  background-color: #FFFFFF;
+  color: #0038A8;
+  border: 3px solid #0038A8;
+}
+
 #outputCard {
   background: linear-gradient(135deg, #0038A8, #CE1126);
   border: 3px solid #FFFFFF;
-  border-radius: 12px;
-  padding: 20px;
   animation: bounce 0.5s;
-}
-
-#generatedName {
-  color: #FFFFFF;
-  font-size: 1.8rem;
-  font-weight: bold;
 }
 
 @keyframes bounce {
@@ -61,7 +63,11 @@ input[type="range"] {
   width: 100%;
 }
 
+input[type="color"] {
+  width: 100%;
+  height: 55px;
+}
+
 .alert {
   font-weight: bold;
-  text-align: center;
 }

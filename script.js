@@ -7,12 +7,13 @@ favoriteNumber.addEventListener('input', function() {
 
 document.getElementById('generateBtn').addEventListener('click', function() {
   const firstInitial = document.getElementById('firstInitial').value.toUpperCase();
-  const lastInitial = document.getElementById('lastInitial').value.toUpperCase();
+  const lastNameFirstChar = document.getElementById('lastNameFirstChar').value.charAt(0).UpperCase();
   const favoritePet = document.getElementById('favoritePet').value;
   const favoriteColor = document.getElementById('favoriteColor').value.toUpperCase();
   const favNumber = parseInt(document.getElementById('favoriteNumber').value);
+  const lengthLastName = document.getElementById('lastNameFirstChar').value.length 
 
-  if (!firstInitial || !lastInitial || !favoritePet || !favoriteColor || !favNumber) {
+  if (!firstInitial || !lastNameFirstChar || !favoritePet || !favoriteColor || !favNumber) {
     document.getElementById('errorMsg').style.display = 'block';
     document.getElementById('outputCard').style.display = 'none';
     return;
@@ -47,18 +48,18 @@ document.getElementById('generateBtn').addEventListener('click', function() {
   }
 
   function getLastName() {
-    if (lastInitial >= 'A' && lastInitial <= 'B') return 'Messier';
-    else if (lastInitial >= 'C' && lastInitial <= 'D') return 'Gilbert';
-    else if (lastInitial >= 'E' && lastInitial <= 'F') return 'Leetch';
-    else if (lastInitial >= 'G' && lastInitial <= 'H') return 'Lundqvist';
-    else if (lastInitial >= 'I' && lastInitial <= 'J') return 'Richter';
-    else if (lastInitial >= 'K' && lastInitial <= 'L') return 'Graves';
-    else if (lastInitial >= 'M' && lastInitial <= 'N') return 'Ratelle';
-    else if (lastInitial >= 'O' && lastInitial <= 'P') return 'Giacomin';
-    else if (lastInitial >= 'Q' && lastInitial <= 'R') return 'Panarin';
-    else if (lastInitial >= 'S' && lastInitial <= 'T') return 'Zibanejad';
-    else if (lastInitial >= 'U' && lastInitial <= 'V') return 'Kreider';
-    else if (lastInitial >= 'W' && lastInitial <= 'X') return 'Rempe';
+    if (lastNameFirstChar >= 'A' && lastNameFirstChar <= 'B' && lengthLastName < 3) return 'Messier';
+    else if (lastNameFirstChar >= 'C' && lastNameFirstChar <= 'D') return 'Gilbert';
+    else if (lastNameFirstChar >= 'E' && lastNameFirstChar <= 'F') return 'Leetch';
+    else if (lastNameFirstChar >= 'G' && lastNameFirstChar <= 'H') return 'Lundqvist';
+    else if (lastNameFirstChar >= 'I' && lastNameFirstChar <= 'J') return 'Richter';
+    else if (lastNameFirstChar >= 'K' && lastNameFirstChar <= 'L') return 'Graves';
+    else if (lastNameFirstChar >= 'M' && lastNameFirstChar <= 'N') return 'Ratelle';
+    else if (lastNameFirstChar >= 'O' && lastNameFirstChar <= 'P') return 'Giacomin';
+    else if (lastNameFirstChar >= 'Q' && lastNameFirstChar <= 'R') return 'Panarin';
+    else if (lastNameFirstChar >= 'S' && lastNameFirstChar <= 'T') return 'Zibanejad';
+    else if (lastNameFirstChar >= 'U' && lastNameFirstChar <= 'V') return 'Kreider';
+    else if (lastNameFirstChar >= 'W' && lastNameFirstChar <= 'X') return 'Rempe';
     else return 'Shesterkin';
   }
 
