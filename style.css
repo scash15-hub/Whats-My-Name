@@ -1,73 +1,177 @@
+@font-face {
+  font-family: 'Ranked Hockey';
+  src: url('fonts/RankedHockey.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Hockey V2';
+  src: url('fonts/HockeyV2.ttf') format('truetype');
+}
+
 body {
+  font-family: 'Poppins', 'Roboto', 'Arial', 'Helvetica', sans-serif;
   background-color: #0038A8;
+  color: #ffffff;
   text-align: center;
-  cursor: url('https://i.imgur.com/XhD0D0r.png'), auto;
+  margin: 0;
+  padding: 0;
 }
 
-.title-font {
-  font-family: 'Bebas Neue', sans-serif;
-  letter-spacing: 2px;
-}
-
-.section-font {
-  font-family: 'Oswald', sans-serif;
-}
-
-.hover-card:hover {
-  transform: scale(1.02);
-  transition: transform 0.3s;
-}
-
-.hover-btn:hover {
-  background-color: #0038A8;
-  color: #FFFFFF;
-  border: 2px solid #FFFFFF;
-  transition: all 0.3s;
-}
-
-.card {
-  border-radius: 12px;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
-}
-
-.bg-red {
-  background-color: #CE1126;
-}
-
-.btn-white {
-  background-color: #FFFFFF;
-  color: #0038A8;
-  font-weight: bold;
-  border: 2px solid #0038A8;
+h1 {
+  font-family: 'Bebas Neue', 'Oswald', 'Ranked Hockey', sans-serif;
+  font-size: 3.5rem;
+  color: #ffffff;
+  margin-bottom: 30px;
+  text-shadow: 2px 2px #CE1126;
 }
 
 .instruction-card {
-  background-color: #FFFFFF;
+  background-color: #ffffff;
   color: #0038A8;
-  border: 3px solid #0038A8;
+  border-radius: 15px;
+  padding: 25px;
+  margin: 0 auto 30px auto;
+  max-width: 600px;
+  text-align: center;
+  font-family: 'Poppins', 'Roboto', 'Verdana', sans-serif;
+  font-size: 1.1rem;
+  box-shadow: 0 5px 10px rgba(0,0,0,0.3);
 }
 
-#outputCard {
-  background: linear-gradient(135deg, #0038A8, #CE1126);
-  border: 3px solid #FFFFFF;
-  animation: bounce 0.5s;
+.fields-card {
+  background-color: #CE1126;
+  color: #ffffff;
+  border-radius: 15px;
+  padding: 25px;
+  margin: 0 auto 40px auto;
+  max-width: 850px;
+  text-align: center;
+  font-family: 'Poppins', 'Roboto', 'Verdana', sans-serif;
+  box-shadow: 0 5px 10px rgba(0,0,0,0.3);
 }
 
-@keyframes bounce {
-  0% { transform: scale(0.8); opacity: 0; }
-  50% { transform: scale(1.1); opacity: 1; }
-  100% { transform: scale(1); }
+label {
+  font-weight: 600;
+  display: block;
+  margin-bottom: 5px;
+  font-size: 1.1rem;
 }
 
-input[type="range"] {
-  width: 100%;
+.form-control,
+.form-select,
+.form-range,
+.form-control-color {
+  border-radius: 8px;
+  margin-bottom: 15px;
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-input[type="color"] {
-  width: 100%;
-  height: 55px;
+#favoriteColor {
+  width: 95% !important;
+  height: 50px;
+  padding: 5px;
+  cursor: pointer;
 }
 
-.alert {
+.fruit-options label {
+  display: inline-block;
+  margin-right: 15px;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.gender-options {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 10px;
+}
+
+.gender-btn {
+  font-family: 'Poppins', 'Roboto', 'Verdana', sans-serif;
   font-weight: bold;
+  padding: 10px 20px;
+  border-radius: 10px;
+  background-color: #ffffff;
+  color: #0038A8;
+  border: 2px solid #0038A8;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.gender-btn.selected {
+  background-color: #0038A8;
+  color: #ffffff;
+  border: 2px solid #CE1126;
+}
+
+.gender-btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 10px rgba(255,255,255,0.7);
+}
+
+#numberValue {
+  font-weight: bold;
+  margin-left: 10px;
+  font-size: 1.2rem;
+}
+
+button.generate-btn {
+  display: block;
+  margin: 25px auto 0 auto;
+  font-family: 'Bebas Neue', 'Oswald', 'Hockey V2', sans-serif;
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  padding: 15px 30px;
+  border-radius: 15px;
+  background-color: #0038A8;
+  color: #CE1126;
+  border: 3px solid #ffffff;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+button.generate-btn:hover {
+  transform: scale(1.1);
+  background-color: #0056b3;
+  color: #ffffff;
+  box-shadow: 0 0 20px rgba(255,255,255,0.7);
+}
+
+#nameDisplay {
+  font-family: 'Bebas Neue', 'Oswald', 'Ranked Hockey', sans-serif;
+  font-size: 3rem;
+  font-weight: bold;
+  color: #ffffff;
+  text-shadow: 2px 2px #CE1126;
+  margin-bottom: 20px;
+}
+
+.btn-danger {
+  font-family: 'Bebas Neue', 'Oswald', 'Hockey V2', sans-serif;
+  background-color: #CE1126;
+  border-color: #0038A8;
+  color: #ffffff;
+  font-weight: bold;
+  font-size: 1.3rem;
+  padding: 12px 30px;
+  border-radius: 15px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-danger:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 15px rgba(255,255,255,0.7);
+}
+
+body {
+  cursor: url('nyrlogo.png'), auto;
+}
+
+.custom-element {
+  cursor: url('another-cursor.cur') 25 15, pointer;
 }
