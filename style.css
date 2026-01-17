@@ -9,7 +9,7 @@
 }
 
 body {
-  font-family: 'Poppins', 'Roboto', 'Arial', 'Helvetica', sans-serif;
+  font-family: 'Poppins', 'Roboto', 'Arial', sans-serif;
   background-color: #0038A8;
   color: #ffffff;
   text-align: center;
@@ -25,43 +25,44 @@ h1 {
   text-shadow: 2px 2px #CE1126;
 }
 
-.instruction-card {
+.subtitle {
+  color: #e6e6e6;
+  margin-bottom: 25px;
+}
+
+.instruction-card,
+.instruct {
   background-color: #ffffff;
   color: #0038A8;
-  border-radius: 15px;
+  border-radius: 16px;
   padding: 25px;
   margin: 0 auto 30px auto;
   max-width: 600px;
-  text-align: center;
-  font-family: 'Poppins', 'Roboto', 'Verdana', sans-serif;
-  font-size: 1.1rem;
-  box-shadow: 0 5px 10px rgba(0,0,0,0.3);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.35);
 }
 
-.fields-card {
+.fields-card,
+.input {
   background-color: #CE1126;
   color: #ffffff;
-  border-radius: 15px;
-  padding: 25px;
+  border-radius: 16px;
+  padding: 30px;
   margin: 0 auto 40px auto;
-  max-width: 850px;
-  text-align: center;
-  font-family: 'Poppins', 'Roboto', 'Verdana', sans-serif;
-  box-shadow: 0 5px 10px rgba(0,0,0,0.3);
+  max-width: 900px;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.35);
 }
 
 label {
   font-weight: 600;
-  display: block;
-  margin-bottom: 5px;
   font-size: 1.1rem;
+  margin-bottom: 6px;
 }
 
 .form-control,
 .form-select,
 .form-range,
 .form-control-color {
-  border-radius: 8px;
+  border-radius: 10px;
   margin-bottom: 15px;
   width: 90%;
   margin-left: auto;
@@ -69,34 +70,24 @@ label {
 }
 
 #favoriteColor {
-  width: 95% !important;
   height: 50px;
-  padding: 5px;
   cursor: pointer;
-}
-
-.fruit-options label {
-  display: inline-block;
-  margin-right: 15px;
-  cursor: pointer;
-  font-size: 1rem;
 }
 
 .gender-options {
   display: flex;
   justify-content: center;
   gap: 15px;
-  margin-bottom: 10px;
+  margin-bottom: 15px;
 }
 
 .gender-btn {
-  font-family: 'Poppins', 'Roboto', 'Verdana', sans-serif;
-  font-weight: bold;
-  padding: 10px 20px;
-  border-radius: 10px;
   background-color: #ffffff;
   color: #0038A8;
-  border: 2px solid #0038A8;
+  border: 3px solid #0038A8;
+  border-radius: 12px;
+  padding: 10px 22px;
+  font-weight: bold;
   cursor: pointer;
   transition: all 0.3s ease;
 }
@@ -104,74 +95,90 @@ label {
 .gender-btn.selected {
   background-color: #0038A8;
   color: #ffffff;
-  border: 2px solid #CE1126;
+  border-color: #ffffff;
 }
 
 .gender-btn:hover {
   transform: scale(1.05);
-  box-shadow: 0 0 10px rgba(255,255,255,0.7);
 }
 
-#numberValue {
-  font-weight: bold;
-  margin-left: 10px;
-  font-size: 1.2rem;
+.fruit-options {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
 }
 
-button.generate-btn {
-  display: block;
-  margin: 25px auto 0 auto;
+.fruit-card input {
+  display: none;
+}
+
+.fruit-card img {
+  width: 75px;
+  height: 75px;
+  border-radius: 14px;
+  border: 3px solid transparent;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.fruit-card input:checked + img {
+  border-color: #0038A8;
+  transform: scale(1.12);
+}
+
+/* UPDATED BUTTON STYLES */
+
+button.generate-btn,
+.regenerate-btn {
+  margin-top: 25px;
   font-family: 'Bebas Neue', 'Oswald', 'Hockey V2', sans-serif;
-  font-size: 1.5rem;
-  font-weight: bold;
-  text-transform: uppercase;
-  padding: 15px 30px;
-  border-radius: 15px;
-  background-color: #0038A8;
+  font-size: 1.6rem;
+  letter-spacing: 1px;
+  padding: 15px 40px;
+  border-radius: 16px;
+  background-color: #ffffff;
   color: #CE1126;
-  border: 3px solid #ffffff;
+  border: 4px solid #0038A8;
   cursor: pointer;
   transition: all 0.3s ease;
 }
 
-button.generate-btn:hover {
-  transform: scale(1.1);
-  background-color: #0056b3;
-  color: #ffffff;
-  box-shadow: 0 0 20px rgba(255,255,255,0.7);
+button.generate-btn:hover,
+.regenerate-btn:hover {
+  background-color: #0038A8;
+  color: #CE1126;
+  border-color: #ffffff;
+  transform: scale(1.08);
+  box-shadow: 0 0 20px rgba(255,255,255,0.6);
 }
 
-#nameDisplay {
-  font-family: 'Bebas Neue', 'Oswald', 'Ranked Hockey', sans-serif;
-  font-size: 3rem;
-  font-weight: bold;
-  color: #ffffff;
-  text-shadow: 2px 2px #CE1126;
+.team-logo {
+  width: 200px;
   margin-bottom: 20px;
 }
 
-.btn-danger {
-  font-family: 'Bebas Neue', 'Oswald', 'Hockey V2', sans-serif;
-  background-color: #CE1126;
-  border-color: #0038A8;
+.name-title {
+  font-family: 'Bebas Neue', 'Oswald', 'Ranked Hockey', sans-serif;
+  font-size: 3rem;
   color: #ffffff;
+  text-shadow: 2px 2px #CE1126;
+}
+
+.name-display {
+  font-family: 'Bebas Neue', 'Oswald', 'Ranked Hockey', sans-serif;
+  font-size: 3rem;
   font-weight: bold;
-  font-size: 1.3rem;
-  padding: 12px 30px;
-  border-radius: 15px;
-  cursor: pointer;
-  transition: all 0.3s ease;
+  margin: 30px 0;
+  color: #ffffff;
+  text-shadow: 3px 3px #CE1126;
 }
-
-.btn-danger:hover {
-  transform: scale(1.05);
-  box-shadow: 0 0 15px rgba(255,255,255,0.7);
-}
-
-body {
-  cursor: url('nyrlogo.png'), auto;
-}
-
-.custom-element {
-  cursor: url('another-cursor.cur') 25 15, pointer;
+.result-card {
+  background-color: #0038A8;
+  color: #ffffff;
+  border-radius: 16px;
+  padding: 30px;
+  margin: 0 auto 40px auto;
+  max-width: 700px;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.35);
 }
