@@ -13,12 +13,12 @@
 <div class="container py-4 text-center">
   <h1 class="title">🏒🥅 Hockey Name Generator 🥅🏒</h1>
 
-  <div class="card p-4 mb-4 instruct">
+  <div class="card instruct p-4 mb-4">
     <h4>How It Works</h4>
     <p>Fill everything out and click Generate Name</p>
   </div>
 
-  <div class="card p-4 input">
+  <div class="card input p-4">
 
     <div class="mb-3">
       <label class="form-label">Gender</label>
@@ -30,29 +30,14 @@
       <input type="hidden" id="gender">
     </div>
 
-    <div class="mb-4">
+    <div class="mb-4 ">
       <label class="form-label">Favorite Fruit</label>
       <div class="fruit-options">
-        <label class="fruit-card">
-          <input type="checkbox" name="fruit" value="Apple">
-          <img src="images/apple.png" alt="Apple">
-        </label>
-        <label class="fruit-card">
-          <input type="checkbox" name="fruit" value="Banana">
-          <img src="images/banana.png" alt="Banana">
-        </label>
-        <label class="fruit-card">
-          <input type="checkbox" name="fruit" value="Strawberry">
-          <img src="images/strawberry.png" alt="Strawberry">
-        </label>
-        <label class="fruit-card">
-          <input type="checkbox" name="fruit" value="Orange">
-          <img src="images/orange.png" alt="Orange">
-        </label>
-        <label class="fruit-card">
-          <input type="checkbox" name="fruit" value="Grape">
-          <img src="images/grape.png" alt="Grape">
-        </label>
+        <label class="fruit-card"><input type="checkbox" name="fruit"><img src="apple.png"></label>
+        <label class="fruit-card"><input type="checkbox" name="fruit"><img src="banana.png"></label>
+        <label class="fruit-card"><input type="checkbox" name="fruit"><img src="strawberry.png"></label>
+        <label class="fruit-card"><input type="checkbox" name="fruit"><img src="orange.png"></label>
+        <label class="fruit-card"><input type="checkbox" name="fruit"><img src="grape.png"></label>
       </div>
     </div>
 
@@ -71,12 +56,12 @@
       <label class="form-label">Favorite Pet</label>
       <select id="favoritePet" class="form-select">
         <option value="">Select</option>
-        <option>Dog</option>
-        <option>Cat</option>
-        <option>Fish</option>
-        <option>Bird</option>
-        <option>Penguin</option>
-        <option>Horse</option>
+        <option value="dog">Dog</option>
+        <option value="cat">Cat</option>
+        <option value="fish">Fish</option>
+        <option value="bird">Bird</option>
+        <option value="penguin">Penguin</option>
+        <option value="horse">Horse</option>
       </select>
     </div>
 
@@ -86,7 +71,9 @@
     </div>
 
     <div class="mb-4">
-      <label class="form-label">Favorite Number</label>
+      <label class="form-label">
+        Favorite Number: <span id="numberValue">1</span>
+      </label>
       <input type="range" id="favoriteNumber" min="1" max="99" value="1" class="form-range">
     </div>
 

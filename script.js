@@ -80,10 +80,10 @@ function getMiddleName(color) {
 
 function getLastName(letter, gender, fruitCount) {
   if ((letter >= "A" && letter <= "B") && gender === "male" && fruitCount >= 1) return "Messier";
-  else if ((letter >= "C" && letter <= "D") && gender === "female" && fruitCount >= 1) return "Gilbert";
-  else if ((letter >= "E" && letter <= "F") && gender === "male" && fruitCount >= 1) return "Leetch";
+  else if ((letter >= "C" && letter <= "D") && gender === "female" && fruitCount >= 3) return "Gilbert";
+  else if ((letter >= "E" && letter <= "F") && gender === "male" && fruitCount >= 2) return "Leetch";
   else if ((letter >= "G" && letter <= "H") && gender === "female" && fruitCount >= 1) return "Lundqvist";
-  else if ((letter >= "I" && letter <= "J") && gender === "male" && fruitCount >= 1) return "Richter";
+  else if ((letter >= "I" && letter <= "J") && gender === "male" && fruitCount >= 4) return "Richter";
   else if ((letter >= "K" && letter <= "L") && gender === "female" && fruitCount >= 1) return "Graves";
   else if ((letter >= "M" && letter <= "N") && gender === "male" && fruitCount >= 1) return "Ratelle";
   else if ((letter >= "O" && letter <= "P") && gender === "female" && fruitCount >= 1) return "Giacomin";
