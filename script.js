@@ -1,5 +1,8 @@
 const genderButtons = document.querySelectorAll(".gender-btn");
 const genderInput = document.getElementById("gender");
+const generateBtn = document.getElementById("generateBtn");
+generateBtn.addEventListener("click", generateName);
+
 
 genderButtons.forEach(btn => {
   btn.addEventListener("click", () => {
